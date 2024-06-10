@@ -1,0 +1,206 @@
+.body{
+    margin: auto;
+}
+
+/* MENÚ - NAVEGADOR */
+.menu{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    position: sticky;
+    background-color: black;
+    color:white;
+    top: 0px;
+    z-index: 2;
+}
+
+/* Links*/
+/* 1 */
+a:link{
+    text-decoration: none;  
+    color: white;  
+}
+/* 2 */
+a:visited{
+    text-decoration: none;
+    color: white;
+}
+/* 3 */
+a:hover{
+    
+    color: red;  
+}
+/* 4 */
+a:active {
+    text-decoration: underline;
+    color: white;
+}
+
+/* Imatge principal */
+.contenidor1{
+    position: relative;
+    width: 100%;
+}
+
+.contenidor1 img{
+    width: 100%;
+}
+
+/* Text per sobre la imatge */
+.topright{
+    color:white;
+    position: absolute;
+    top: 0%;
+    right: 25px;
+    font-size: 18px;
+}
+
+/* Exercici GRID */
+.contenidor2{
+    padding: 75px;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-areas:  "element2 element3 element4 element4"
+            "element1 element1 element4 element4"
+            "element5 element5 element5 element5";
+    row-gap: 5px;
+    column-gap: 5px;
+
+}
+
+.element1{
+    grid-area: element1;
+    background-color: lightblue;
+
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.element1 h4{
+    display: flex;
+    justify-content: center;
+}
+
+.element2{
+    grid-area: element2;
+    background-color: lime;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.element3{
+    grid-area: element3;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.element4{
+    grid-area: element4;
+    background-color: goldenrod;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.element4 img{
+    width: 100%;
+}
+
+.element5{
+    grid-area: element5;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+}
+
+/* Footer */
+.footer{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+/* MEDIA QUERIES */
+@media (max-width:576px){
+    .menu{
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        padding: 20px;
+        position: sticky;
+        background-color: white;
+        color:black;
+        top: 0px;
+        z-index: 2;
+    }
+    
+    a:link{
+        text-decoration: none;  
+        color: black;  
+    }
+    /* 2 */
+    a:visited{
+        text-decoration: none;
+        color: black;
+    }
+    /* 3 */
+    a:hover{
+        
+        color: red;  
+    }
+    /* 4 */
+    a:active {
+        text-decoration: underline;
+        color: black;
+    }
+
+    /* Treure l'element 3 */
+    .element-menu3{
+        display: none;
+    }
+
+    /* Titol de la imatge principal */
+    .topright{
+        font-size: 12px; /*L'únic que cambio és el tamany de la font*/
+    }
+
+    /* GRID */
+    .contenidor2{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:  "element2 element5"
+                "element1 element1"
+                "element4 element4"
+                "element3 element3";
+        row-gap: 0px;
+        column-gap: 0px;
+        padding: 2px;
+        justify-content: center;
+    }
+
+    .element1 h4{
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Footer eliminar */
+    .footer{
+        display: flex;
+        justify-content: center;
+    }
+    /* Footer */
+    .curs{
+        display: none;
+    }
+}
